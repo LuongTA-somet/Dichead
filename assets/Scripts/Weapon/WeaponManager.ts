@@ -15,7 +15,8 @@ export default class NewClass extends cc.Component {
     item2: cc.Node = null; 
     @property(cc.Node)
     item3: cc.Node = null; 
-
+    @property(cc.Node)
+    item4: cc.Node = null; 
 
     // LIFE-CYCLE CALLBACKS:
 
@@ -32,8 +33,10 @@ export default class NewClass extends cc.Component {
      }
     Active(){
 
-        this.item.active=true;
+            this.item.active=true;
             this.item2.active=true;
             this.item3.active=true;
+            this.item4.active=true;
+            this.weapon.node.active=false;
     }
 }
