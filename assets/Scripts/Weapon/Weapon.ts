@@ -1,15 +1,13 @@
 
-
+import WeaponManager from "./WeaponManager";
+import BaseCharacter from "../Base/BaseCharacter";
 const {ccclass, property} = cc._decorator;
 
 @ccclass
 export default class Weapon extends cc.Component {
+    weaponManager: WeaponManager = null;
+    owner: BaseCharacter = null;
 
-    @property(cc.Node)
-    player: cc.Node = null; 
-
-
-itemHit=false;
     start() {
   
         cc.tween(this.node)
@@ -21,14 +19,13 @@ itemHit=false;
     }
     onCollisionEnter(other: cc.Collider): void {
 
-        if(other.node.name=="Enemy"){
-            other.node.destroy();
+        if(other.node.name=="Enemy copy"){
+            this.weaponManager.score+=10;
         }
         
-        if(other.node.name=="Item"){
-            other.node.destroy()
-          this.itemHit=true
-            
-        }
+        
+    }
+    DeleteItSelf() {
+        this.node.destroy();
     }
 }

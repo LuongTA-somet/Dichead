@@ -1,0 +1,49 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "Boss",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 1.0166666666666666,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 2,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "88bb20fb-97d4-4be5-9934-a791d97b6082"
+            }
+          },
+          {
+            "frame": 0.25,
+            "value": {
+              "__uuid__": "be3f9930-150c-4137-b6b9-a4742e790a10"
+            }
+          },
+          {
+            "frame": 0.5,
+            "value": {
+              "__uuid__": "88bb20fb-97d4-4be5-9934-a791d97b6082"
+            }
+          },
+          {
+            "frame": 0.75,
+            "value": {
+              "__uuid__": "be3f9930-150c-4137-b6b9-a4742e790a10"
+            }
+          },
+          {
+            "frame": 1,
+            "value": {
+              "__uuid__": "88bb20fb-97d4-4be5-9934-a791d97b6082"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}

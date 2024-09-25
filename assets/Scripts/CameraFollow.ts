@@ -1,4 +1,4 @@
-import Singleton from "./New Folder/Singleton";
+import Singleton from "./Base/Singleton";
 
 const {ccclass, property} = cc._decorator;
 
@@ -36,29 +36,5 @@ export default class CameraFollower extends Singleton<CameraFollower> {
 
 
    
-    // @property(cc.Node)  
-    // player: cc.Node = null;
 
-    // @property
-    // followSpeed: number = 5;  
-
-
-    // update(dt: number) {
-    //     if (!this.player) {
-    //         return;
-    //     }
-
-      
-    //     let cameraPos = this.node.position;
-    //     let playerPos = this.player.position;
-
-       
-    //     let targetPos = cameraPos.lerp(playerPos, this.followSpeed * dt);
-
-        
-        
-
-       
-    //     this.node.position = targetPos;
-    // }
 }
