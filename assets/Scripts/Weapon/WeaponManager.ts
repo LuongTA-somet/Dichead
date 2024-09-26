@@ -23,7 +23,10 @@ export default class WeaponManager extends cc.Component {
     arrWeapon: Weapon[] = [];
     indexWeapon = 0;
 
+    isX10:boolean=false;
+isDestroy:boolean=false;
     score:number=50;
+    
     protected start(): void {
         this.Plus(this.numberOfSword);
 
@@ -131,30 +134,3 @@ export default class WeaponManager extends cc.Component {
 
 
 
-// const {ccclass, property} = cc._decorator;
-
-// @ccclass
-// export default class WeaponManager extends cc.Component {
-
-//     @property(Weapon)
-//     weapon: Weapon = null;
-
-//     @property(cc.Node)
-//     item: cc.Node = null; 
-//     @property(cc.Node)
-//     item2: cc.Node = null; 
-//     @property(cc.Node)
-//     item3: cc.Node = null; 
-//     @property(cc.Node)
-//     item4: cc.Node = null; 
-
-   
-//     Active(){
-
-//             this.item.active=true;
-//             this.item2.active=true;
-//             this.item3.active=true;
-//             this.item4.active=true;
-//             this.weapon.node.active=false;
-//     }
-// }

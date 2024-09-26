@@ -1,0 +1,49 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "Destroy",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 0.48333333333333334,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 2,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "528095bf-8af5-4a8a-8cb2-0ab3f967997d"
+            }
+          },
+          {
+            "frame": 0.11666666666666667,
+            "value": {
+              "__uuid__": "bec21222-3437-4857-9cbb-946e0fc12d2a"
+            }
+          },
+          {
+            "frame": 0.23333333333333334,
+            "value": {
+              "__uuid__": "153b0eb9-ce74-4e3d-8dfc-92cea0c89549"
+            }
+          },
+          {
+            "frame": 0.35,
+            "value": {
+              "__uuid__": "d97a5eee-850f-4fb4-b19f-d23895c227f2"
+            }
+          },
+          {
+            "frame": 0.4666666666666667,
+            "value": {
+              "__uuid__": "d3fe32d6-6c8e-4939-9f82-dd2197fa83dd"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}

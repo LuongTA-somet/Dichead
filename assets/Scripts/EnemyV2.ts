@@ -1,12 +1,12 @@
+import WeaponManager from "./Weapon/WeaponManager";
 import BaseCharacter from "./Base/BaseCharacter";
 import SoundManager from "./Manager/SoundManager";
-import WeaponManager from "./Weapon/WeaponManager";
-import GameManager from "./Manager/GameManager";
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class Enemy extends BaseCharacter {
+export default class EnemyV2 extends BaseCharacter {
 
+    
     @property(cc.Node)  
     player: cc.Node = null;
 
@@ -31,7 +31,7 @@ weaponManager:WeaponManager=null;
 
     start(): void {
         this.player = cc.find("Canvas/Player");
-        Enemy.enemies.push(this.node);  
+        EnemyV2.enemies.push(this.node);  
     }
 
     update(dt: number) {
@@ -70,8 +70,8 @@ weaponManager:WeaponManager=null;
     CheckDistanceBetweenEnemies(): cc.Vec3 {
         let separationOffset = cc.v3(0, 0, 0); 
 
-        for (let i = 0; i < Enemy.enemies.length; i++) {
-            let otherEnemy = Enemy.enemies[i];
+        for (let i = 0; i < EnemyV2.enemies.length; i++) {
+            let otherEnemy = EnemyV2.enemies[i];
 
             if (otherEnemy !== this.node) {
                 let distance = this.Distance(this.node.position, otherEnemy.position);
@@ -90,15 +90,23 @@ weaponManager:WeaponManager=null;
 
     onCollisionEnter(other: cc.Collider): void {
         if (other.node.name == "Weapon") {
+
+           // if(this.weaponManager.score<1000)return
             this.anim.play("Die");
-          
-           SoundManager.Instance(SoundManager).Play("EnemyDie");
+            SoundManager.Instance(SoundManager).Play("EnemyDie");
             setTimeout(() => {
                 this.node.active = false;
             }, 400);
             this.player = null;
         }
-    
+        if(other.node.name=="ItemDestroy"){
+            this.anim.play("Die");
+         
+                   setTimeout(() => {
+                       this.node.active = false;
+                   }, 400);
+                   this.player = null;
+        }
     }
 ClearEnemy(){
     
