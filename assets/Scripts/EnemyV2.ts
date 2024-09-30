@@ -1,6 +1,9 @@
 import WeaponManager from "./Weapon/WeaponManager";
 import BaseCharacter from "./Base/BaseCharacter";
 import SoundManager from "./Manager/SoundManager";
+import GameManager from "./Manager/GameManager";
+import Enemy from "./Enemy";
+import Player from "./Player";
 const {ccclass, property} = cc._decorator;
 
 @ccclass
@@ -9,7 +12,8 @@ export default class EnemyV2 extends BaseCharacter {
     
     @property(cc.Node)  
     player: cc.Node = null;
-
+    @property(Player)
+    play:Player=null;
     @property
     speed: number = 200;  
 
@@ -30,11 +34,14 @@ weaponManager:WeaponManager=null;
     static enemies: cc.Node[] = [];  
 
     start(): void {
-        this.player = cc.find("Canvas/Player");
-        EnemyV2.enemies.push(this.node);  
+     this.player = cc.find("Canvas/Player");
+      
+      //  EnemyV2.enemies.push(this.node);  
+      //  Enemy.enemies.push(this.node)
     }
 
     update(dt: number) {
+        if (GameManager.instance.isStart)
         this.Move(dt);
         
     }
@@ -49,13 +56,13 @@ weaponManager:WeaponManager=null;
         let directionToPlayer = playerPos.sub(enemyPos).normalize(); 
     
         
-        let separationOffset = this.CheckDistanceBetweenEnemies();
+     //   let separationOffset = this.CheckDistanceBetweenEnemies();
     
 
-        let finalDirection = directionToPlayer.add(separationOffset).normalize();
+       // let finalDirection = directionToPlayer.add(directionToPlayer ).normalize();
         
         if (this.Distance(playerPos, enemyPos) > this.minDis) {
-            let moveStep = finalDirection.mul(this.speed * dt);
+            let moveStep = directionToPlayer .mul(this.speed * dt);
             this.node.position = enemyPos.add(moveStep);
         }
     
@@ -84,33 +91,71 @@ weaponManager:WeaponManager=null;
                 }
             }
         }
+        for (let i = 0; i < Enemy.enemies.length; i++) {
+            let otherEnemy = Enemy.enemies[i];
+
+            if (otherEnemy !== this.node) {
+                let distance = this.Distance(this.node.position, otherEnemy.position);
+
+                
+                if (distance < this.minSpace) {
+                    let directionAwayFromOther = this.node.position.sub(otherEnemy.position).normalize();
+                    let pushStrength = this.minSpace - distance;
+                    separationOffset = separationOffset.add(directionAwayFromOther.mul(pushStrength));
+                }
+            }
+        }
 
         return separationOffset;
     }
 
     onCollisionEnter(other: cc.Collider): void {
         if (other.node.name == "Weapon") {
+            
 
-           // if(this.weaponManager.score<1000)return
-            this.anim.play("Die");
+            if(this.weaponManager.isX10==true){
             SoundManager.Instance(SoundManager).Play("EnemyDie");
-            setTimeout(() => {
+           
+            this.applyKnockback(other.node, 25);  
+            
+      
+            this.scheduleOnce(() => {
+                GameManager.instance.spawnBone(this.node.position,1.5);
                 this.node.active = false;
-            }, 400);
-            this.player = null;
+            }, 0.1);
+        }else{this.weaponManager.isDie=true;}
+           // if(this.weaponManager.score<1000)return
+            // this.anim.play("Die");
+           
+            // setTimeout(() => {
+            //     this.node.active = false;
+            // }, 400);
+            // this.player = null;
+
         }
         if(other.node.name=="ItemDestroy"){
-            this.anim.play("Die");
+           // this.anim.play("Die");
          
                    setTimeout(() => {
+                  GameManager.instance.spawnBone(this.node.position,1.5);
                        this.node.active = false;
                    }, 400);
                    this.player = null;
         }
     }
-ClearEnemy(){
+    applyKnockback(weaponNode: cc.Node, knockbackForce: number) {
+      
+        let knockbackDirection = this.node.position.sub(weaponNode.position).normalize();
     
-}
+       
+        let knockbackVector = knockbackDirection.mul(knockbackForce);
+    
+  
+        cc.tween(this.node)
+            .by(0.2, { position: cc.v3(knockbackVector.x, knockbackVector.y, 0) }, { easing: "quadOut" }) 
+            .start();
+    }
+    
     Distance(vec1: cc.Vec3, vec2: cc.Vec3): number {
         return Math.sqrt(Math.pow(vec1.x - vec2.x, 2) + Math.pow(vec1.y - vec2.y, 2));
     }

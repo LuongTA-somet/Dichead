@@ -2,6 +2,7 @@
 
 
 import BaseCharacter from "../Base/BaseCharacter";
+import Player from "../Player";
 import Weapon from "./Weapon";
 
 const { ccclass, property } = cc._decorator;
@@ -12,6 +13,7 @@ export default class WeaponManager extends cc.Component {
     maxWeapon: number = 0;
     @property(BaseCharacter)
     owner: BaseCharacter = null;
+ 
     @property(cc.Integer)
     rotateSpeed: number = 0;
     @property(cc.Integer)
@@ -26,13 +28,14 @@ export default class WeaponManager extends cc.Component {
     isX10:boolean=false;
 isDestroy:boolean=false;
     score:number=50;
-    
+    isDie:boolean=false;
     protected start(): void {
         this.Plus(this.numberOfSword);
 
     }
     protected update(dt: number): void {
         this.node.angle -= this.rotateSpeed * dt;
+        
     }
     Plus(indexAdd: number) {
         let newIndex = this.indexWeapon + indexAdd;
