@@ -1,7 +1,6 @@
 {
-  "ver": "2.3.7",
+  "ver": "2.3.4",
   "uuid": "523d307d-73a9-4a77-acd5-cd147dbe44c7",
-  "importer": "texture",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -13,9 +12,8 @@
   "platformSettings": {},
   "subMetas": {
     "ROOM UNLOCKED": {
-      "ver": "1.0.6",
+      "ver": "1.0.4",
       "uuid": "d1c12384-d315-4cce-bea0-664acccf95a6",
-      "importer": "sprite-frame",
       "rawTextureUuid": "523d307d-73a9-4a77-acd5-cd147dbe44c7",
       "trimType": "custom",
       "trimThreshold": 1,

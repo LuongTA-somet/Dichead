@@ -24,7 +24,22 @@ export default class SoundManager extends Singleton<SoundManager> {
         super();
         SoundManager.instance = this;
     }
+   
+        extends: cc.Component
+   onLoad(): void {
+        cc.systemEvent.on('audioVolumeChange', this.onVolumeChange, this);
+    }
+    onVolumeChange(event) {
+        const volumeData = event.getUserData();
+        const newVolume = volumeData.volume;
+        
+       
+        cc.audioEngine.setMusicVolume(newVolume);
+        cc.audioEngine.setEffectsVolume(newVolume);
+        cc.log('Volume changed to:', newVolume);
+    }
     start() {
+        
         this.sounds.forEach(sound => {
             sound.source = this.node.addComponent(cc.AudioSource);
             sound.source.clip = sound.clip;
@@ -36,7 +51,7 @@ export default class SoundManager extends Singleton<SoundManager> {
         });
     }
     Play(name: string) {
-        if (Global.offAllSounds) return;
+        if (Global.offAllSound) return;
         var track: Sound = null;
         this.sounds.forEach(sound => {
             if (sound.name == name) {
@@ -54,5 +69,26 @@ export default class SoundManager extends Singleton<SoundManager> {
         this.sounds.forEach(sound => {
             sound.source.resume();
         })
+    }
+
+    PlayEffectSoundGameRemake(target: cc.AudioClip, loop: boolean) {
+        if (!Global.offAllSound) {
+            cc.audioEngine.playEffect(target, loop);
+        } else {
+            cc.log("Quite M<mo<de !");
+        }
+    }
+
+    PlaySoundGameRemake(target: cc.AudioClip, loop: boolean, volume: number) {
+        let id: number
+        if (!Global.offAllSound) {
+            id = cc.audioEngine.play(target, loop, volume);
+        } else {
+            cc.log("Quite M<mo<de !");
+        }
+        return id;
+    }
+    onDestroy () {
+        cc.systemEvent.off('audioVolumeChange', this.onVolumeChange, this);
     }
 }

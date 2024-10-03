@@ -1,7 +1,6 @@
 {
-  "ver": "2.3.7",
+  "ver": "2.3.4",
   "uuid": "c636b807-a3bd-4c5c-95dd-6d813448c5b2",
-  "importer": "texture",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -13,9 +12,8 @@
   "platformSettings": {},
   "subMetas": {
     "SurvivorIO_3": {
-      "ver": "1.0.6",
+      "ver": "1.0.4",
       "uuid": "f71c3883-9c94-4587-8b53-3d669a39d9b1",
-      "importer": "sprite-frame",
       "rawTextureUuid": "c636b807-a3bd-4c5c-95dd-6d813448c5b2",
       "trimType": "custom",
       "trimThreshold": 1,

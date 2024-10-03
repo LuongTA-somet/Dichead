@@ -19,9 +19,9 @@ export default class CameraFollower extends Singleton<CameraFollower> {
     @property(cc.Float)
     targetY: number = 100;
     @property(cc.Node)
-    endGame: cc.Node;
+    endGame: cc.Node=null;
     @property(WeaponManager)
-    weaponManager: WeaponManager
+    weaponManager: WeaponManager=null;
     isTweenRunning: boolean = false;
     isTweenRunning2: boolean = false;
 
@@ -106,7 +106,7 @@ export default class CameraFollower extends Singleton<CameraFollower> {
     }
 
     end() {
-        this.endGame.scale = 3;
+        GameManager.Instance(GameManager).EndGame();
         this.endGame.active = true;
     }
     shakeCamera(duration: number, strength: number) {

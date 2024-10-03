@@ -1,7 +1,6 @@
 {
-  "ver": "2.3.7",
+  "ver": "2.3.4",
   "uuid": "10a5e29e-59c0-4352-a80a-bb5cfb5704d3",
-  "importer": "texture",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "point",
@@ -13,9 +12,8 @@
   "platformSettings": {},
   "subMetas": {
     "tanker_idle_front_1": {
-      "ver": "1.0.6",
+      "ver": "1.0.4",
       "uuid": "7a7c9c13-f288-418f-8584-364bb6a29e39",
-      "importer": "sprite-frame",
       "rawTextureUuid": "10a5e29e-59c0-4352-a80a-bb5cfb5704d3",
       "trimType": "auto",
       "trimThreshold": 0,

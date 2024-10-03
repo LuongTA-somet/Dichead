@@ -1,7 +1,6 @@
 {
-  "ver": "2.3.7",
+  "ver": "2.3.4",
   "uuid": "ac99f595-1cc5-4a68-accd-d67792bc2819",
-  "importer": "texture",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -13,9 +12,8 @@
   "platformSettings": {},
   "subMetas": {
     "Swing_Sword_Support": {
-      "ver": "1.0.6",
+      "ver": "1.0.4",
       "uuid": "ae57915b-d23c-4166-b82d-58204829ffa2",
-      "importer": "sprite-frame",
       "rawTextureUuid": "ac99f595-1cc5-4a68-accd-d67792bc2819",
       "trimType": "custom",
       "trimThreshold": 1,

@@ -1,7 +1,6 @@
 {
-  "ver": "2.3.7",
+  "ver": "2.3.4",
   "uuid": "d8a92d00-253b-4ae1-8d0c-bef1977b82e2",
-  "importer": "texture",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -13,9 +12,8 @@
   "platformSettings": {},
   "subMetas": {
     "ic heroes": {
-      "ver": "1.0.6",
+      "ver": "1.0.4",
       "uuid": "e2ec83c6-f7d0-4701-af24-0de289a08ec7",
-      "importer": "sprite-frame",
       "rawTextureUuid": "d8a92d00-253b-4ae1-8d0c-bef1977b82e2",
       "trimType": "custom",
       "trimThreshold": 1,

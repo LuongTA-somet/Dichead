@@ -4,8 +4,7 @@ import WeaponManager from "./Weapon/WeaponManager";
 import GameManager from "./Manager/GameManager";
 import CameraFollower from "./CameraFollow";
 import SoundManager from "./Manager/SoundManager";
-import Singleton from "./Base/Singleton";
-import Item from "./Item";
+
 const { ccclass, property } = cc._decorator;
 
 @ccclass
@@ -21,10 +20,10 @@ export default class Player extends BaseCharacter {
     @property(cc.Animation)
     anim: cc.Animation = null;
     @property(WeaponManager)
-    weaponManager: WeaponManager
+    weaponManager: WeaponManager = null;
 
     @property(cc.Sprite)
-    characterSprite: cc.Sprite
+    characterSprite: cc.Sprite = null;
 
     pos: cc.Vec2 = cc.v2(0, 0);
     tryTime: number = 2;
@@ -33,11 +32,16 @@ export default class Player extends BaseCharacter {
     startPos: cc.Vec2 = null;
     canmove: boolean = true;
     isTweenRunning2: boolean = false;
+    flag: boolean = false;
+    public rigid: cc.RigidBody = null;
     start(): void {
         this.startPos = this.node.getPosition();
+        this.rigid = this.node.getComponent(cc.RigidBody);
     }
     update(dt: number) {
-       
+        if (this.rigid != null) {
+            this.rigid.syncPosition(true);
+        }
         if (this.weaponManager.isDie) {
             //this.anim.play("Die");
             GameManager.instance.spawnBone(this.node.position, 1);
@@ -55,13 +59,15 @@ export default class Player extends BaseCharacter {
                 this.weaponManager.score = 0;
 
                 if (this.tryTime <= 0) {
-                    this.canmove = false;
-                    this.isEnd = true;
-                    GameManager.Instance(GameManager).EndGame();
-                    setTimeout(() => {
-                        CameraFollower.Instance(CameraFollower).endGame.active = true;
-                        SoundManager.instance.PauseAll();
-                    }, 1000);
+                    if (!this.flag) {
+                        this.flag = true;
+                        this.canmove = false;
+                        GameManager.Instance(GameManager).EndGame();
+                        setTimeout(() => {
+                            CameraFollower.Instance(CameraFollower).endGame.active = true;
+                            SoundManager.instance.PauseAll();
+                        }, 1000);
+                    }
                 }
 
             }, 1.5)
@@ -130,16 +136,16 @@ export default class Player extends BaseCharacter {
         });
     }
     onCollisionEnter(other: cc.Collider): void {
-       
+
         if (other.node.name == "EnemyV3 copy") {
             this.scheduleOnce(() => {
-                GameManager.instance.spawnBone(this.node.position,1.5);
+                GameManager.instance.spawnBone(this.node.position, 1.5);
                 this.node.active = false;
             }, 0.1);
 
         }
-        
-        
+
+
     }
 
 }

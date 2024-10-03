@@ -1,7 +1,6 @@
 {
-  "ver": "2.3.7",
+  "ver": "2.3.4",
   "uuid": "096d6013-e934-493b-b1e2-275688f1fcf1",
-  "importer": "texture",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -13,9 +12,8 @@
   "platformSettings": {},
   "subMetas": {
     "CHEST PINK1.skel": {
-      "ver": "1.0.6",
+      "ver": "1.0.4",
       "uuid": "45238467-bea8-427d-b072-9eab14f2b8c3",
-      "importer": "sprite-frame",
       "rawTextureUuid": "096d6013-e934-493b-b1e2-275688f1fcf1",
       "trimType": "auto",
       "trimThreshold": 1,

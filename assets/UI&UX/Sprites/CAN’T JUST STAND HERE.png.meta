@@ -1,7 +1,6 @@
 {
-  "ver": "2.3.7",
+  "ver": "2.3.4",
   "uuid": "e94054fe-daf3-4544-8065-324b0212a759",
-  "importer": "texture",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -13,9 +12,8 @@
   "platformSettings": {},
   "subMetas": {
     "CAN’T JUST STAND HERE": {
-      "ver": "1.0.6",
+      "ver": "1.0.4",
       "uuid": "d1492dcf-a062-4066-aa6f-2d4ff9b37ea1",
-      "importer": "sprite-frame",
       "rawTextureUuid": "e94054fe-daf3-4544-8065-324b0212a759",
       "trimType": "custom",
       "trimThreshold": 1,

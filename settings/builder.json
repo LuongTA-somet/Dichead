@@ -1,14 +1,15 @@
 {
   "title": "LittleHero",
   "packageName": "org.cocos2d.demo",
-  "startScene": "e00b2d35-7f1b-439c-89de-610be008ced9",
+  "startScene": "73ffe1c7-43a5-4049-ae12-27be9ce4545a",
   "excludeScenes": [
     "1dbd40a3-3033-481a-a815-a56e7b11d396",
-    "cd0481dc-4f93-4be6-a105-d3b113b8d5b0"
+    "cd0481dc-4f93-4be6-a105-d3b113b8d5b0",
+    "e00b2d35-7f1b-439c-89de-610be008ced9"
   ],
   "orientation": {
-    "landscapeRight": true,
     "landscapeLeft": true,
+    "landscapeRight": true,
     "portrait": false,
     "upsideDown": false
   },
@@ -18,41 +19,43 @@
   "mainCompressionType": "default",
   "mainIsRemote": false,
   "optimizeHotUpdate": false,
-  "md5Cache": true,
+  "md5Cache": false,
   "nativeMd5Cache": true,
   "encryptJs": true,
   "xxteaKey": "e07513d4-becf-4f",
   "zipCompressJs": true,
   "fb-instant-games": {},
   "android": {
-    "packageName": "org.cocos2d.demo",
-    "REMOTE_SERVER_ROOT": ""
+    "REMOTE_SERVER_ROOT": "",
+    "packageName": "org.cocos2d.demo"
   },
   "ios": {
-    "packageName": "org.cocos2d.demo",
     "REMOTE_SERVER_ROOT": "",
-    "ios_enable_jit": true
+    "ios_enable_jit": true,
+    "packageName": "org.cocos2d.demo"
   },
   "mac": {
-    "packageName": "org.cocos2d.demo",
     "REMOTE_SERVER_ROOT": "",
-    "width": 1280,
-    "height": 720
+    "height": 720,
+    "packageName": "org.cocos2d.demo",
+    "width": 1280
   },
   "win32": {
     "REMOTE_SERVER_ROOT": "",
-    "width": 1280,
-    "height": 720
+    "height": 720,
+    "width": 1280
   },
   "android-instant": {
-    "packageName": "org.cocos2d.demo",
     "REMOTE_SERVER_ROOT": "",
-    "pathPattern": "",
-    "scheme": "https",
     "host": "",
-    "skipRecord": false,
-    "recordPath": ""
+    "packageName": "org.cocos2d.demo",
+    "pathPattern": "",
+    "recordPath": "",
+    "scheme": "https",
+    "skipRecord": false
   },
   "appBundle": false,
-  "agreements": {}
+  "agreements": {},
+  "includeSDKBox": false,
+  "mergeStartScene": false
 }

@@ -1,7 +1,6 @@
 {
-  "ver": "2.3.7",
+  "ver": "2.3.4",
   "uuid": "a6547686-fb2d-476d-8394-66126b3ea1a6",
-  "importer": "texture",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -13,9 +12,8 @@
   "platformSettings": {},
   "subMetas": {
     "GUn.skel_3.7_output": {
-      "ver": "1.0.6",
+      "ver": "1.0.4",
       "uuid": "2ecb1848-9efb-4305-9200-29a279236f7a",
-      "importer": "sprite-frame",
       "rawTextureUuid": "a6547686-fb2d-476d-8394-66126b3ea1a6",
       "trimType": "auto",
       "trimThreshold": 1,

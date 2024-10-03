@@ -1,7 +1,6 @@
 {
-  "ver": "2.3.7",
+  "ver": "2.3.4",
   "uuid": "a21d2831-fb62-4903-b55a-b906680ca07f",
-  "importer": "texture",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "point",
@@ -13,9 +12,8 @@
   "platformSettings": {},
   "subMetas": {
     "Idle+Move_front_2": {
-      "ver": "1.0.6",
+      "ver": "1.0.4",
       "uuid": "ba9b8eb6-a532-4a69-9204-8c4d3577c72c",
-      "importer": "sprite-frame",
       "rawTextureUuid": "a21d2831-fb62-4903-b55a-b906680ca07f",
       "trimType": "custom",
       "trimThreshold": 0,

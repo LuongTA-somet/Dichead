@@ -1,7 +1,6 @@
 {
-  "ver": "2.3.7",
+  "ver": "2.3.4",
   "uuid": "dc4ad95a-3cb6-4809-a250-f173d5a0b4d2",
-  "importer": "texture",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -13,9 +12,8 @@
   "platformSettings": {},
   "subMetas": {
     "KiemXanh": {
-      "ver": "1.0.6",
+      "ver": "1.0.4",
       "uuid": "30859fb9-84f3-4fd3-824d-54e7295ad267",
-      "importer": "sprite-frame",
       "rawTextureUuid": "dc4ad95a-3cb6-4809-a250-f173d5a0b4d2",
       "trimType": "auto",
       "trimThreshold": 1,

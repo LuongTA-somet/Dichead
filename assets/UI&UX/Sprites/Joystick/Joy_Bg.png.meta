@@ -1,7 +1,6 @@
 {
-  "ver": "2.3.7",
+  "ver": "2.3.4",
   "uuid": "4c39f7f0-7d87-4f6a-aaa0-48753de11e5e",
-  "importer": "texture",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -13,9 +12,8 @@
   "platformSettings": {},
   "subMetas": {
     "Joy_Bg": {
-      "ver": "1.0.6",
+      "ver": "1.0.4",
       "uuid": "50341f30-0eb6-4a11-bdc7-c5948b46c9ed",
-      "importer": "sprite-frame",
       "rawTextureUuid": "4c39f7f0-7d87-4f6a-aaa0-48753de11e5e",
       "trimType": "auto",
       "trimThreshold": 1,

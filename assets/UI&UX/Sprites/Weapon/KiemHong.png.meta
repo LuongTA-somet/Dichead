@@ -1,7 +1,6 @@
 {
-  "ver": "2.3.7",
+  "ver": "2.3.4",
   "uuid": "8701a80f-a164-4768-ab71-c0f7ec296d9f",
-  "importer": "texture",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -13,9 +12,8 @@
   "platformSettings": {},
   "subMetas": {
     "KiemHong": {
-      "ver": "1.0.6",
+      "ver": "1.0.4",
       "uuid": "98fcf547-ed37-47bd-8d99-40eb2923ba47",
-      "importer": "sprite-frame",
       "rawTextureUuid": "8701a80f-a164-4768-ab71-c0f7ec296d9f",
       "trimType": "auto",
       "trimThreshold": 1,

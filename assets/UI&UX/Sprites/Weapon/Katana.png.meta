@@ -1,7 +1,6 @@
 {
-  "ver": "2.3.7",
+  "ver": "2.3.4",
   "uuid": "012f5f49-f032-46e3-8901-89aefea70c5d",
-  "importer": "texture",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -13,9 +12,8 @@
   "platformSettings": {},
   "subMetas": {
     "Katana": {
-      "ver": "1.0.6",
+      "ver": "1.0.4",
       "uuid": "bb75cf57-1147-473c-aabb-e5feaf67ecc4",
-      "importer": "sprite-frame",
       "rawTextureUuid": "012f5f49-f032-46e3-8901-89aefea70c5d",
       "trimType": "auto",
       "trimThreshold": 1,

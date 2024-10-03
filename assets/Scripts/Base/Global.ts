@@ -5,7 +5,7 @@ interface Global {
     isStartGame: boolean,
     isEndGame: boolean,
     isPause: boolean,
-    offAllSounds: boolean,
+    offAllSound: boolean,
 }
 
 let Global: Global = {
@@ -15,5 +15,5 @@ let Global: Global = {
     isStartGame: false,
     isEndGame: false,
     isPause: false,
-    offAllSounds: false,}
+    offAllSound: false,}
     export default Global;

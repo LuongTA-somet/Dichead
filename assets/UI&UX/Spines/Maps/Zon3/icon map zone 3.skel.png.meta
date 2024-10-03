@@ -1,7 +1,6 @@
 {
-  "ver": "2.3.7",
+  "ver": "2.3.4",
   "uuid": "ca4d8fdc-7f31-4e4f-b1a6-c5e71d93d909",
-  "importer": "texture",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -13,9 +12,8 @@
   "platformSettings": {},
   "subMetas": {
     "icon map zone 3.skel": {
-      "ver": "1.0.6",
+      "ver": "1.0.4",
       "uuid": "7816051c-acdb-4e8f-bc2f-b9802b486044",
-      "importer": "sprite-frame",
       "rawTextureUuid": "ca4d8fdc-7f31-4e4f-b1a6-c5e71d93d909",
       "trimType": "auto",
       "trimThreshold": 1,

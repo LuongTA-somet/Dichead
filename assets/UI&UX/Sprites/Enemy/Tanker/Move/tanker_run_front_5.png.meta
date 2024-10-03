@@ -1,7 +1,6 @@
 {
-  "ver": "2.3.7",
+  "ver": "2.3.4",
   "uuid": "c551fb03-728a-4f92-bc97-def8a8f33453",
-  "importer": "texture",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "point",
@@ -13,9 +12,8 @@
   "platformSettings": {},
   "subMetas": {
     "tanker_run_front_5": {
-      "ver": "1.0.6",
+      "ver": "1.0.4",
       "uuid": "d5be16e2-4578-414a-addb-9541d6469cc2",
-      "importer": "sprite-frame",
       "rawTextureUuid": "c551fb03-728a-4f92-bc97-def8a8f33453",
       "trimType": "custom",
       "trimThreshold": 0,

@@ -1,7 +1,6 @@
 {
-  "ver": "2.3.7",
+  "ver": "2.3.4",
   "uuid": "514cc209-337d-4115-a4c1-dcafbd0fa31f",
-  "importer": "texture",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -13,9 +12,8 @@
   "platformSettings": {},
   "subMetas": {
     "Odaichi": {
-      "ver": "1.0.6",
+      "ver": "1.0.4",
       "uuid": "a2c2009c-9ea9-4988-a59e-7a298df8d1e6",
-      "importer": "sprite-frame",
       "rawTextureUuid": "514cc209-337d-4115-a4c1-dcafbd0fa31f",
       "trimType": "auto",
       "trimThreshold": 1,

@@ -4,9 +4,9 @@ const {ccclass, property} = cc._decorator;
 @ccclass
 export default class EnableEngine extends cc.Component {
 @property(cc.Canvas)
-canvas:cc.Canvas 
+canvas:cc.Canvas =null;
 @property(WeaponManager)
-weaponManager:WeaponManager
+weaponManager:WeaponManager=null;
 isTweenRunning:boolean =false;
 isTweenRunning2:boolean =false;
 protected update(dt: number): void {

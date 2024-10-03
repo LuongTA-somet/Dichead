@@ -1,7 +1,6 @@
 {
-  "ver": "2.3.7",
+  "ver": "2.3.4",
   "uuid": "27a1040b-c4e3-4629-a560-1fb9b994ef28",
-  "importer": "texture",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -13,9 +12,8 @@
   "platformSettings": {},
   "subMetas": {
     "fx_enemy_die2": {
-      "ver": "1.0.6",
+      "ver": "1.0.4",
       "uuid": "1637178b-e373-470c-b002-a313d252a901",
-      "importer": "sprite-frame",
       "rawTextureUuid": "27a1040b-c4e3-4629-a560-1fb9b994ef28",
       "trimType": "auto",
       "trimThreshold": 0,

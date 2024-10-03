@@ -1,7 +1,6 @@
 {
-  "ver": "2.3.7",
+  "ver": "2.3.4",
   "uuid": "3a4180c2-3b16-4dfa-93b9-78aabd093d20",
-  "importer": "texture",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "point",
@@ -13,9 +12,8 @@
   "platformSettings": {},
   "subMetas": {
     "KnifeThrow_Front_Idle_2": {
-      "ver": "1.0.6",
+      "ver": "1.0.4",
       "uuid": "ff45329b-628c-45c6-b661-d55bd1c69359",
-      "importer": "sprite-frame",
       "rawTextureUuid": "3a4180c2-3b16-4dfa-93b9-78aabd093d20",
       "trimType": "custom",
       "trimThreshold": 0,

@@ -1,7 +1,6 @@
 {
-  "ver": "2.3.7",
+  "ver": "2.3.4",
   "uuid": "1e4894aa-a99d-4cf2-934a-5e908d04d73c",
-  "importer": "texture",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -13,9 +12,8 @@
   "platformSettings": {},
   "subMetas": {
     "humvee topdown": {
-      "ver": "1.0.6",
+      "ver": "1.0.4",
       "uuid": "cfc04331-bf5c-41d8-b234-4f540133614f",
-      "importer": "sprite-frame",
       "rawTextureUuid": "1e4894aa-a99d-4cf2-934a-5e908d04d73c",
       "trimType": "auto",
       "trimThreshold": 1,

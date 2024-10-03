@@ -1,7 +1,6 @@
 {
-  "ver": "2.3.7",
+  "ver": "2.3.4",
   "uuid": "60c2b7cd-63c0-4286-aa75-0e62dc93a45d",
-  "importer": "texture",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -13,9 +12,8 @@
   "platformSettings": {},
   "subMetas": {
     "HoiCham": {
-      "ver": "1.0.6",
+      "ver": "1.0.4",
       "uuid": "1b7acd98-c73d-496e-8f21-2b4fa1cef6bb",
-      "importer": "sprite-frame",
       "rawTextureUuid": "60c2b7cd-63c0-4286-aa75-0e62dc93a45d",
       "trimType": "custom",
       "trimThreshold": 1,

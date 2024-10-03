@@ -23,25 +23,34 @@ export default class Enemy extends BaseCharacter {
 
     @property(cc.Float)
     minDis: number = 10;
-
+    public rigid: cc.RigidBody = null;
     static enemies: cc.Node[] = [];
 
 
     start(): void {
         this.player = cc.Canvas.instance.node.getChildByName("Player");
-        //  Enemy.enemies.push(this.node);  
+
+        this.rigid = this.node.getComponent(cc.RigidBody);
     }
 
-    update(dt: number) {
-        //if(this.play.isEnd)return;
-        if (GameManager.instance.isStart)
-        {
+    // update(dt: number) {
 
+    //     if (GameManager.instance.isStart) {
+
+    //         this.Move(dt);
+    //     }
+    //     if (this.rigid != null) {
+    //         this.rigid.syncPosition(true);
+    //     }
+    // }
+    FuncUpdate(dt: number, isStart: boolean) {
+        if (isStart) {
             this.Move(dt);
         }
-
+        if (this.rigid != null) {
+            this.rigid.syncPosition(true);
+        }
     }
-
     Move(dt: number) {
 
 
@@ -49,11 +58,6 @@ export default class Enemy extends BaseCharacter {
         let playerPos = this.player.position;
         let directionToPlayer = playerPos.sub(enemyPos).normalize();
 
-
-        // let separationOffset = this.CheckDistanceBetweenEnemies();
-
-
-        // let finalDirection = directionToPlayer.add(separationOffset).normalize();
 
         if (this.Distance(playerPos, enemyPos) > this.minDis) {
             let moveStep = directionToPlayer.mul(this.speed * dt);
@@ -68,26 +72,6 @@ export default class Enemy extends BaseCharacter {
     }
 
 
-    // CheckDistanceBetweenEnemies(): cc.Vec3 {
-    //     let separationOffset = cc.v3(0, 0, 0); 
-
-    //     for (let i = 0; i < Enemy.enemies.length; i++) {
-    //         let otherEnemy = Enemy.enemies[i];
-
-    //         if (otherEnemy !== this.node) {
-    //             let distance = this.Distance(this.node.position, otherEnemy.position);
-
-
-    //             if (distance < this.minSpace) {
-    //                 let directionAwayFromOther = this.node.position.sub(otherEnemy.position).normalize();
-    //                 let pushStrength = this.minSpace - distance;
-    //                 separationOffset = separationOffset.add(directionAwayFromOther.mul(pushStrength));
-    //             }
-    //         }
-    //     }
-
-    //     return separationOffset;
-    // }
 
     onCollisionEnter(other: cc.Collider): void {
         if (other.node.name == "Weapon") {
@@ -96,20 +80,22 @@ export default class Enemy extends BaseCharacter {
 
             this.applyKnockback(other.node, 15);
 
-
+            GameManager.instance.enemyArr
             this.scheduleOnce(() => {
                 GameManager.instance.spawnBone(this.node.position, 1);
+                const index = GameManager.instance.enemyArr.indexOf(this);
+                if (index > -1) {
+                    GameManager.instance.enemyArr.splice(index, 1);
+                }
                 this.node.active = false;
+                this.node.destroy();
+               
             }, 0.);
 
-            // this.anim.play("Die");  
-            // setTimeout(() => {
-            //     this.node.active = false;
-            // }, 400);
-            // this.player = null;
+            ;
         }
         if (other.node.name == "ItemDestroy") {
-            // this.anim.play("Die");
+
 
             setTimeout(() => {
                 GameManager.instance.spawnBone(this.node.position, 1);

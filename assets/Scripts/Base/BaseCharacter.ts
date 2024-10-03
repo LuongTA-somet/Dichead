@@ -9,17 +9,15 @@ export default class BaseCharacter extends cc.Component {
     hp:number=0;
     curHp:number=0;
     @property(cc.Node)
-    hpBar:cc.Node
+    hpBar:cc.Node =null;
     @property(cc.Sprite)
-    slider:cc.Sprite
+    slider:cc.Sprite=null;
 
-    // LIFE-CYCLE CALLBACKS:
 
-    // onLoad () {}
 
     start () {
 this.curHp=this.hp;
     }
 
-    // update (dt) {}
+   
 }

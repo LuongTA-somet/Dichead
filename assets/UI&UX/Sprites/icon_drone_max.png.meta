@@ -1,7 +1,6 @@
 {
-  "ver": "2.3.7",
+  "ver": "2.3.4",
   "uuid": "b0cde090-2574-426c-a284-dbdfe2ec1cc2",
-  "importer": "texture",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -13,9 +12,8 @@
   "platformSettings": {},
   "subMetas": {
     "icon_drone_max": {
-      "ver": "1.0.6",
+      "ver": "1.0.4",
       "uuid": "2e86fe72-02b0-479d-b23e-062fdc28635c",
-      "importer": "sprite-frame",
       "rawTextureUuid": "b0cde090-2574-426c-a284-dbdfe2ec1cc2",
       "trimType": "custom",
       "trimThreshold": 1,

@@ -1,7 +1,6 @@
 {
-  "ver": "2.3.7",
+  "ver": "2.3.4",
   "uuid": "ceed376c-af59-4b68-8e9c-ada913586bed",
-  "importer": "texture",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -13,9 +12,8 @@
   "platformSettings": {},
   "subMetas": {
     "Boss4_Box3": {
-      "ver": "1.0.6",
+      "ver": "1.0.4",
       "uuid": "615c2d17-7783-4791-aaba-2e35b9197a47",
-      "importer": "sprite-frame",
       "rawTextureUuid": "ceed376c-af59-4b68-8e9c-ada913586bed",
       "trimType": "custom",
       "trimThreshold": 1,

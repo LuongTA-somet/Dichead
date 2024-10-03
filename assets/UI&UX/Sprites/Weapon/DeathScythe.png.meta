@@ -1,7 +1,6 @@
 {
-  "ver": "2.3.7",
+  "ver": "2.3.4",
   "uuid": "df24ad9b-e26a-4834-8530-09ad1c3eeaec",
-  "importer": "texture",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -13,9 +12,8 @@
   "platformSettings": {},
   "subMetas": {
     "DeathScythe": {
-      "ver": "1.0.6",
+      "ver": "1.0.4",
       "uuid": "4999457f-f151-4a1b-83f8-d9aa73123060",
-      "importer": "sprite-frame",
       "rawTextureUuid": "df24ad9b-e26a-4834-8530-09ad1c3eeaec",
       "trimType": "auto",
       "trimThreshold": 1,

@@ -7,8 +7,7 @@ const { ccclass, property } = cc._decorator;
 
 @ccclass
 export default class Item extends cc.Component {
-    @property(Player)
-    player: Player = null;
+
     @property(cc.Node)
     animSuper: cc.Node = null;
     @property(cc.Float)
@@ -16,6 +15,7 @@ export default class Item extends cc.Component {
     isHit: boolean = false;
     isEndGame: boolean = false;
     isTweenRunning: boolean = false;
+    flag: boolean = false;
     start(): void {
 
         Enemy.enemies.push(this.node);
@@ -61,7 +61,6 @@ export default class Item extends cc.Component {
 
             }, 700);
             setTimeout(() => {
-
                 this.isEndGame = true;
             }, 3000);
         }
@@ -71,10 +70,12 @@ export default class Item extends cc.Component {
         if (this.isEndGame) {
             CameraFollower.Instance(CameraFollower).EndGamePos(4);
             SoundManager.instance.PauseAll();
-            setTimeout(() => {
-                CameraFollower.Instance(CameraFollower).end();
-            }, 1000);
-
+            if (!this.flag) {
+                this.flag = true;
+                setTimeout(() => {
+                    CameraFollower.Instance(CameraFollower).end();
+                }, 1000);
+            }
         }
     }
     Distance(vec1: cc.Vec3, vec2: cc.Vec3): number {

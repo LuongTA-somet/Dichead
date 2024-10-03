@@ -1,7 +1,6 @@
 {
-  "ver": "2.3.7",
+  "ver": "2.3.4",
   "uuid": "10f0b296-43be-4431-b479-3aa1ad27c907",
-  "importer": "texture",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -13,9 +12,8 @@
   "platformSettings": {},
   "subMetas": {
     "Enemy_1 1": {
-      "ver": "1.0.6",
+      "ver": "1.0.4",
       "uuid": "fa88ccc4-5264-4f5e-9609-49f85c79cb81",
-      "importer": "sprite-frame",
       "rawTextureUuid": "10f0b296-43be-4431-b479-3aa1ad27c907",
       "trimType": "auto",
       "trimThreshold": 1,
